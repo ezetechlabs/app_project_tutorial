@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>DevMarketer - MANAGEMENT</title>
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        
+         html, body {
+                background-color: whitesmoke;
+                color: #636b6f;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+    </style>
+    @yield('styles')
+</head>
+<body>
+
+    @include('_includes.nav.main')
+
+    @include('_includes.nav.manage')
+
+    <div class="management-area" id="app">
+      @yield('content')
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+   {{--  @include('_includes.notifications.toast') --}}
+    @yield('scripts')
+</body>
+</html>
