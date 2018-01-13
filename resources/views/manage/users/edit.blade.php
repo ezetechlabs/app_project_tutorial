@@ -72,7 +72,7 @@
 
 @section('scripts')
   <script>
-
+    Vue.use(Buefy.default)
     var app = new Vue({
       el: '#app',
       data: {

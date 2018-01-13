@@ -8,21 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>DevMarketer - MANAGEMENT</title>
+    <title>EzeTech Lab - MANAGEMENT</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-        
-         html, body {
-                background-color: whitesmoke;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-    </style>
     @yield('styles')
 </head>
 <body>

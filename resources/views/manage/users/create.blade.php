@@ -30,7 +30,7 @@
             <label for="password" class="label">Password</label>
             <p class="control">
               <input type="text" class="input" name="password" id="password" v-if="!auto_password" placeholder="Manually give a password to this user">
-              <b-checkbox name="auto_generate" class="m-t-15" v-model="auto_password">Auto Generate Password</b-checkbox>
+              <b-checkbox name="auto_generate" class="m-t-15" v-bind:class="{disabled: disableButton}">Auto Generate Password</b-checkbox>
             </p>
           </div>
         </div> <!-- end of .column -->
@@ -58,12 +58,20 @@
 
 @section('scripts')
   <script>
-    var app = new Vue({
+    Vue.component(Buefy.Checkbox.auto_generate, Buefy.Checkbox)
+    var vm = new Vue({
       el: '#app',
       data: {
         auto_password: true,
         rolesSelected: [{!! old('roles') ? old('roles') : '' !!}]
-      }
+      },
+      computed:{
+          enableSubmitBtn() {
+              if (this.auto_password){
+              this.auto_password = false;
+            }
+          }
+        }
     });
   </script>
 @endsection

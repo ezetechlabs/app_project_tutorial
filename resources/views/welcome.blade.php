@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    T&eacuterezTechs
+                    EzeTech Lab
                 </div>
 
                 <div class="links">

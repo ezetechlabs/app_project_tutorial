@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app1')
 
 @section('content')
 
@@ -6,7 +6,7 @@
     <div class="column is-one-third is-offset-one-third m-t-100">
       <div class="card">
         <div class="card-content">
-          <h1 class="title">Join Our Community</h1>
+          <h1 class="title has-text-centered">Join Our Community</h1>
 
           <form action="{{route('register')}}" method="POST" role="form">
             {{csrf_field()}}
@@ -69,7 +69,7 @@
               </div>
             </div>
 
-            <button class="button is-success is-fullwidth m-t-30">Register</button>
+            <button class="button is-success is-outlined is-fullwidth m-t-30">Register</button>
           </form>
         </div> <!-- end of .card-content -->
       </div> <!-- end of .card -->
